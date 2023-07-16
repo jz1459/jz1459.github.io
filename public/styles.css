@@ -1,5 +1,4 @@
 /*Default CSS */
-/************ Default Css ************/
 * {
     margin: 0;
     padding: 0;
@@ -76,6 +75,7 @@ p.success {
 p.danger {
     color: red;
 }
+/* End of Default CSS */
 
 /* NavBar CSS */
 
@@ -125,7 +125,7 @@ span.navbar-text {
 .social-icon a {
     width: 42px;
     height: 42px;
-    background: rgba(217, 217, 217, 0.1);
+    background: white;
     display: inline-flex;
     border-radius: 50%;
     margin-right: 6px;
@@ -251,12 +251,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
 nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border-color: transparent;
 }
+/* End of NavBar CSS */
 
 /* Home CSS */
 .home {
     margin-top: 0;
     padding: 260px 0 100px 0;
-    background-image: url('./assets/img/banner-bg.png');
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -334,9 +334,39 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate>.wrap {
     border-right: 0.08em solid #666;
 }
+/* End of Home CSS */
+
+/* About Me CSS */
+.about {
+    padding: 120px 0;
+    position: relative;
+    background-color: black;
+}
+
+.about-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+}
+
+.about h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.about p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
 
 
-/* Resume CSS */
+
+/* End of About Me CSS */
 
 /* Projects CSS */
 .projects {
@@ -483,13 +513,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     z-index: -4;
 }
 
-/* Contact Me CSS */
-
+/* End of Projects CSS */
 
 /* Footer CSS */
 
 .footer {
-    padding: 0 0 50px 0;
+    padding: 20px 0;
     background-image: url('./assets/img/footer-bg.png');
     background-position: center center;
     background-size: cover;
@@ -500,6 +529,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 26%;
 }
 
+.footer h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
 .footer p {
     font-weight: 400;
     font-size: 14px;
@@ -507,3 +540,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     letter-spacing: 0.5px;
     margin-top: 20px;
 }
+
+
+
+
+/* End of Footer CSS */

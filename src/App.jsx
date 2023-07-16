@@ -2,8 +2,7 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Resume from "./pages/Resume";
-import Contact from "./pages/Contact";
+import About from "./pages/About";
 import Projects from "./pages/Projects";
 
 function App() {
@@ -11,9 +10,8 @@ function App() {
         <div className = "App">
             <NavBar />
             <Home />
-            <Resume />
+            <About />
             <Projects />
-            <Contact />
             <Footer />
         </div>
       
