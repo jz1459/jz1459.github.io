@@ -49,7 +49,7 @@ function NavBar() {
                                 <a href="https://www.linkedin.com/in/jz1459/"><img src={LinkedIn} alt="LinkedIn" /></a>
                                 <a href="https://www.github.com/jz1459"><img src={GitHub} alt="Github" /></a>
                             </div>
-                            <HashLink to='#connect'>
+                            <HashLink to='#footer'>
                                 <button className="vvd"><span>Let’s Connect</span></button>
                             </HashLink>
                         </span>

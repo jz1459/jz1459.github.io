@@ -38,7 +38,25 @@ function About() {
                                                     <CustomToggle eventKey="0">Education</CustomToggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="0">
-                                                    <Card.Body>Education (cards that hold the activies classes, gpa etc.)</Card.Body>
+                                                    <Card.Body>
+                                                        <Row>
+                                                            <Col size={6}>
+                                                                <Card>
+                                                                    <Card.Title>
+                                                                        Saratoga Springs High School
+                                                                    </Card.Title>
+                                                                </Card>
+                                                            </Col>
+                                                            <Col size={6}>
+                                                                <Card>
+                                                                    <Card.Title>
+                                                                        Yale University
+                                                                    </Card.Title>
+                                                                </Card>
+                                                            </Col>
+                                                        </Row>
+                                                        Education (cards that hold the activies classes, gpa etc.)
+                                                    </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                             <Card>
@@ -46,7 +64,9 @@ function About() {
                                                     <CustomToggle eventKey="1">Work Experience</CustomToggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="1">
-                                                    <Card.Body>Work Experience (Cards that hold each experience like the squares)</Card.Body>
+                                                    <Card.Body>
+                                                        Work Experience (Cards that hold each experience like the squares)
+                                                    </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                             <Card>
@@ -54,10 +74,15 @@ function About() {
                                                     <CustomToggle eventKey="2">Skills</CustomToggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="2">
-                                                    <Card.Body>Skills (Technicals)</Card.Body>
+                                                    <Card.Body>
+                                                        Skills (Technicals)
+                                                    </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                         </Accordion>
+                              
+                                        <button><span>Resume</span></button>
+                  
                                     </div>
                                 </div>}
                         </TrackVisibility>
