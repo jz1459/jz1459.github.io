@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
-import { Row, Container, Col } from "react-bootstrap";
+import { Row, Container, Col } from 'react-bootstrap';
 import TrackVisibility from 'react-on-screen';
+import Activity from '../assets/activity.svg';
+import Briefcase from '../assets/briefcase-fill.svg';
+import Pencil from '../assets/pencil-fill.svg';
 
 
 function About() {
@@ -30,8 +33,18 @@ function About() {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <div className="about-bx">
-                                        <h2>About Me</h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                                        <div className = "section-header">
+                                        <p>
+                                            About
+                                        </p>
+                                        <h2>Let me introduce myself.</h2>
+                                        <p>
+                                            I am a first-generation student at Yale University pursuing a Bachelor of Science in Computer Science and Economics with a Certificate in Data Science. My primary interests lie within the intersection of finance and computer science. 
+                                            <br>
+                                            </br>
+                                            I am actively seeking summer 2024 internships for software engineering. 
+                                            </p>
+                                        </div>
                                         <Accordion defaultActiveKey="0">
                                             <Card>
                                                 <Card.Header>
@@ -39,23 +52,55 @@ function About() {
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="0">
                                                     <Card.Body>
-                                                        <Row>
-                                                            <Col size={6}>
-                                                                <Card>
-                                                                    <Card.Title>
-                                                                        Saratoga Springs High School
-                                                                    </Card.Title>
-                                                                </Card>
-                                                            </Col>
-                                                            <Col size={6}>
-                                                                <Card>
-                                                                    <Card.Title>
-                                                                        Yale University
-                                                                    </Card.Title>
-                                                                </Card>
+                                                        <Row className = "resume-timeline">
+                                                            <Col size={12}>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="pencil"><img src={Pencil} alt="Pencil" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="pencil"><img src={Pencil} alt="Pencil" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Certificate</h3>
+                                                                            <p>June 2022-July 2022</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>London School of Economics</h4>
+                                                                            <p>Distinction in Finance (FM250) and Introduction to Behavioral Economics (EC200)</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="pencil"><img src={Pencil} alt="Pencil" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>High School Degree</h3>
+                                                                            <p>September 2017-June 2021</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Saratoga Springs High School</h4>
+                                                                            <p>Regents Diploma with Advanced Desgination with Honors with Mastery in Math and Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </Col>
                                                         </Row>
-                                                        Education (cards that hold the activies classes, gpa etc.)
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
@@ -65,15 +110,121 @@ function About() {
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="1">
                                                     <Card.Body>
-                                                        Work Experience (Cards that hold each experience like the squares)
+                                                        <Row className = "resume-timeline">
+                                                            <Col size={12}>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="work"><img src={Briefcase} alt="Briefcase" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="work"><img src={Briefcase} alt="Briefcase" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="work"><img src={Briefcase} alt="Briefcase" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
                                                     </Card.Body>
                                                 </Accordion.Collapse>
                                             </Card>
                                             <Card>
                                                 <Card.Header>
-                                                    <CustomToggle eventKey="2">Skills</CustomToggle>
+                                                    <CustomToggle eventKey="2">Activities</CustomToggle>
                                                 </Card.Header>
                                                 <Accordion.Collapse eventKey="2">
+                                                    <Card.Body>
+                                                        <Row className = "resume-timeline">
+                                                            <Col size={12}>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="timeline">
+                                                                    <div className = "timeline-block">
+                                                                        <div className="timeline-icon">
+                                                                            <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                        </div>
+                                                                        <div className="timeline-header">
+                                                                            <h3>Bachelor's Degree</h3>
+                                                                            <p>August 2021 - May 2025</p>
+                                                                        </div>
+                                                                        <div className="timeline-body">
+                                                                            <h4>Yale University</h4>
+                                                                            <p>B.S. Computer Science and Economics, Certificate in Data Science</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </Col>
+                                                        </Row>
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card>
+                                                <Card.Header>
+                                                    <CustomToggle eventKey="3">Skills</CustomToggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="3">
                                                     <Card.Body>
                                                         Skills (Technicals)
                                                     </Card.Body>

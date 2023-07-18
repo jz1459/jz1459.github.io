@@ -1,42 +1,11 @@
 import React from "react";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "../components/ProjectCard";
-import projImg1 from "../assets/poker-7174110.png";
-import projImg2 from "../assets/poker-7174110.png";
-import projImg3 from "../assets/poker-7174110.png";
+import ProjectCarousel, {ProjectCard } from "../components/ProjectCards";
 // import colorSharp2 from "../assets/.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 function Projects(){
-
-    const projects = [
-        {
-            title: "Poker Hand App",
-            technicals: "Used: Poker-odds API, React, JS, HTML, CSS",
-            description: "Gives probability of your poker hand winning based off the cards in your hand and those on the table",
-            imgUrl: projImg1,
-        },
-        {
-            title: "To-Do App w/ Randomizer",
-            technicals: "Design & Development",
-            description: "In Progress",
-            imgUrl: projImg2,
-        },
-        {
-            title: "Taste of China Website",
-            technicals: "Design & Development",
-            description: "In Progress",
-            imgUrl: projImg3,
-        },
-        {
-            title: "Fantasy Football App",
-            technicals: "Design & Development",
-            description: "In Progress",
-            imgUrl: projImg1,
-        },
-    ];
-
     return (
         <section className="projects" id="projects">
             <Container>
@@ -58,21 +27,10 @@ function Projects(){
                                         </Nav>
                                         <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                                             <Tab.Pane eventKey="first">
-                                                <Row>
-                                                    {
-                                                        projects.map((project, index) => {
-                                                            return (
-                                                                <ProjectCard
-                                                                    key={index}
-                                                                    {...project}
-                                                                />
-                                                            )
-                                                        })
-                                                    }
-                                                </Row>
+                                                <ProjectCard />
                                             </Tab.Pane>
                                             <Tab.Pane eventKey="second">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                                <ProjectCarousel />
                                             </Tab.Pane>
                                         </Tab.Content>
                                     </Tab.Container>
