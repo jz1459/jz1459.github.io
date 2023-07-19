@@ -328,9 +328,9 @@ function About() {
                                     <Accordion.Collapse eventKey="3">
                                         <Card.Body>
                                             <div className='resume-skills'>
-                                                <h5> Languages: </h5><h6> C | Python | R | JS | Java | HTML | CSS | MongoDB | Unix | Git | x86-Assembly | LateX | Racket | Bubble</h6>
+                                                <h5> Languages </h5><h6> C | Python | R | JS | Java | HTML | CSS | MongoDB | Unix | Git | x86-Assembly | LateX | Racket | Bubble</h6>
                                                 <br></br>
-                                                <h5>Frameworks/Libraries: </h5><h6>Node | React | Bootstrap | Express | Mongoose | jQuery | EJS | RShiny</h6>
+                                                <h5>Frameworks/Libraries </h5><h6>Node | React | Bootstrap | Express | Mongoose | jQuery | EJS | RShiny</h6>
                                             </div>
                                         </Card.Body>
                                     </Accordion.Collapse>

@@ -4,6 +4,7 @@ import Pfp from "../assets/profilePic.JPG";
 import { ArrowRightCircle, Display } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Down from "../assets/chevron-down.svg";
 
 function Home() {
     const [loopNum, setLoopNum] = useState(0);
@@ -57,7 +58,7 @@ function Home() {
                                     <span className="tagline">Welcome to my Portfolio!</span>
                                     <h1>{`Hi! I'm Jason, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer", "Sports Enthusiast", "Car Fanatic" ]'><span className="wrap">{text}</span></span></h1>
                                     {/* <p>I am currently a rising junior at Yale University majoring in Computer Science and Economics with a Certificate in Data Science.</p> */}
-                                    <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                                    <button><a href="#contact">Let’s Connect <ArrowRightCircle size={25} /></a></button>
                                 </div>}
                         </TrackVisibility>
                     </Col>
@@ -65,13 +66,16 @@ function Home() {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                                    <div className = "d-flex align-items-center justify-content-center">
-                                        <img src={Pfp} alt="me" />
+                                    <div className="d-flex align-items-center justify-content-center">
+                                        <div className="pfp">
+                                            <img src={Pfp} alt="me" />
+                                            </div>
                                     </div>
                                 </div>}
                         </TrackVisibility>
                     </Col>
                 </Row>
+                <div className="go-down"><a class="smoothscroll" href="#about"><img src={Down} alt="Down Arrow" /></a></div>
             </Container>
         </section>
     );

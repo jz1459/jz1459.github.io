@@ -1,8 +1,7 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import projImg1 from "../assets/poker-7174110.png";
-import projImg2 from "../assets/poker-7174110.png";
-import projImg3 from "../assets/poker-7174110.png";
+import PokerHandApp from "../assets/poker-7174110.png";
+import WorkInProgress from "../assets/work-in-progress.png";
 import { Col, Row } from "react-bootstrap";
 
 
@@ -11,25 +10,25 @@ const projects = [
             title: "Poker Hand App",
             technicals: "Used: Poker-odds API, React, JS, HTML, CSS",
             description: "Gives probability of your poker hand winning based off the cards in your hand and those on the table",
-            imgUrl: projImg1,
+            imgUrl: PokerHandApp,
         },
         {
             title: "To-Do App w/ Randomizer",
             technicals: "Design & Development",
             description: "In Progress",
-            imgUrl: projImg2,
+            imgUrl: WorkInProgress,
         },
         {
             title: "Taste of China Website",
             technicals: "Design & Development",
             description: "In Progress",
-            imgUrl: projImg3,
+            imgUrl: WorkInProgress,
         },
         {
             title: "Fantasy Football App",
             technicals: "Design & Development",
             description: "In Progress",
-            imgUrl: projImg1,
+            imgUrl: WorkInProgress,
         },
 ];
     
@@ -60,7 +59,7 @@ function ProjectCard () {
     return (
     <Row>
             {projects.map(project => (
-                <Col size={12} sm={12} md={6}>
+                <Col size={12} sm={6} md={6}>
                     <div className="proj-imgbx">
                         <img src={project.imgUrl} alt="" />
                         <h4>{project.title}</h4>

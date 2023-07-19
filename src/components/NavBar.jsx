@@ -50,7 +50,7 @@ function NavBar() {
                                 <a href="https://www.github.com/jz1459"><img src={GitHub} alt="Github" /></a>
                             </div>
                             <HashLink to='#contact'>
-                                <button className="vvd"><span>Let’s Connect</span></button>
+                                <button><span>Let’s Connect</span></button>
                             </HashLink>
                         </span>
                     </Navbar.Collapse>
