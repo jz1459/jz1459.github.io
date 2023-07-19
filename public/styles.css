@@ -1,3 +1,24 @@
+/* Custom Font Styles */
+
+@font-face {
+    font-family: Centra;
+    src: url('./assets/font/CentraNo2-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: Centra;
+    src: url('./assets/font/CentraNo2-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Centra;
+    src: url('./assets/font/CentraNo2-Book.ttf');
+    font-weight: 400;
+}
+
+/* End of Custom Font Styles */
+
 /*Default CSS */
 * {
     margin: 0;
@@ -88,8 +109,7 @@ p.danger {
 }
 
 .section-header h1 {
-    font-family: 'opensans-bold', sans-serif;
-    font-size: 3.6rem;
+    font-size: 65px;
     color: #313131;
     line-height: 1.25;
     margin-bottom: 1.2rem;
@@ -97,10 +117,11 @@ p.danger {
 
 .section-header h5 {
     color: #F06000;
-    font-size: 1.6rem;
+    font-weight: 400;
+    font-size: 25px;
     line-height: 1.875;
     margin-bottom: 0.3rem;
-    letter-spacing: .4rem;
+    letter-spacing: 0.8px;
 }
 /* End of General Styles */
 
@@ -127,17 +148,19 @@ nav.navbar a.navbar-brand {
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
-    color: #fff !important;
+    color: #fff ;
     letter-spacing: 0.8px;
     padding: 0 25px;
     font-size: 18px;
-    opacity: 0.75;
+    opacity: 1;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
+    color: #F06000;
 }
+
 
 span.navbar-text {
     display: flex;
@@ -175,7 +198,7 @@ span.navbar-text {
 
 .social-icon a:hover::before {
     transform: scale(1);
-    background-color: azure;
+    background-color: #F06000;
 }
 
 .social-icon a img {
@@ -267,7 +290,7 @@ nav.navbar .navbar-toggler-icon:before {
 /* Home CSS */
 .home {
     margin-top: 0;
-    padding: 260px 0 100px 0;
+    padding: 260px 0 200px 0;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -325,7 +348,8 @@ nav.navbar .navbar-toggler-icon:before {
 .home img {
     animation: updown 4s linear infinite;
     border-radius: 50%;
-
+    width: 70%;
+    height: 70%;
 }
 
 @keyframes updown {
@@ -349,7 +373,7 @@ nav.navbar .navbar-toggler-icon:before {
 
 /* About Me CSS */
 .about {
-    padding: 120px 0;
+    padding: 100px 0;
     position: relative;
     background-color: black;
 }
@@ -362,18 +386,25 @@ nav.navbar .navbar-toggler-icon:before {
     margin-top: -60px;
 }
 
-.about h2 {
-    font-size: 45px;
-    font-weight: 700;
+.about .section-header {
+    margin-bottom: 40px;
+}
+
+.about .section-header h1{
+    color: white;
+    font-size: 40px;
 }
 
 .about p {
     color: #B8B8B8;
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+    line-height: 20px;
+    width: 100%;
+    text-align: center;
 }
+
+
 
 .about button {
     font-weight: 700;
@@ -403,18 +434,38 @@ nav.navbar .navbar-toggler-icon:before {
     transition: 0.3s ease-in-out;
 }
 
-.about button:hover {
-    transition: 0.3s ease-in-out;
-    background-color: white;
-    color: #121212;
 
+.about button:hover {
+    transition: 0.3s ease-in-out !important;
+    background-color: black !important;
+    color: white !important;
 }
 
 .about button:hover::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    content: "" !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+}
+
+.about .resume-button:hover {
+    transition: 0.3s ease-in-out !important;
+    background-color: white !important;
+    color: #121212 !important;
+}
+
+.about .resume-button:hover::before {
+    content: "" !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+}
+
+.about .card-header {
+    background-color: white;
+}
+.about .card-body {
+    background-color: white;
 }
 
 .about .resume-timeline {
@@ -423,8 +474,8 @@ nav.navbar .navbar-toggler-icon:before {
 
 .about .timeline {
     position: relative;
-    margin-top: 1.5rem;
-    margin-bottom: 6rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .about .timeline::before {
@@ -432,71 +483,76 @@ nav.navbar .navbar-toggler-icon:before {
     display: block;
     width: 1px;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: #F06000;
     position: absolute;
-    left: 35%;
+    left: 40%;
     top: 0;
 }
 
 .about .timeline-block {
     position: relative;
-    padding-top: 1.5rem;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .about .timeline-icon {
     /* height: 4.8rem; */
     /* width: 4.8rem; */
     /* line-height: 4.8rem; */
-    height: 42px;
-    width: 42px;
-    line-height: 42px;
-    background: black;
-    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    background: transparent;
     text-align: center;
     color: white;
     position: absolute;
-    left: 35%;
+    left: 40%;
     /* top: .9rem; */
     /* margin-left: -2.4rem; */
 }
 
 .about .timeline-icon i {
     position: relative;
-    left: .05rem;
-    top: .2rem;
 }
 
 .about .timline-icon i img {
     position: relative;
-    width: 10%;
-    
+    width: 20%;
+    height: 10px;
 }
+
 
 .about .timeline-header {
     float: left;
-    width: 35%;
-    padding-right: 90px;
-    text-align: right;
+    width: 40%;
+    text-align: center;
 }
 
 .about .timeline-header h3 {
     margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .about .timeline-header p {
-    font-family: "poppins-regular", sans-serif;
     font-size: 15px;
     color: #888888;
+    padding-top: 10px;
 }
 
 .about .timeline-body {
-    margin-left: 35%;
-    padding-left: 60px;
+    margin-left: 50%;
 }
 
 .about .timeline-body h4 {
     position: relative;
     padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.about .timeline-body p {
+    font-size: 15px;
+    padding-top: 10px;
 }
 
 .about .timeline-body h4::after {
@@ -509,9 +565,6 @@ nav.navbar .navbar-toggler-icon:before {
     left: 0;
     bottom: 0;
 }
-.about .timeline-content {
-    padding-left: 7rem;
-}
 
 /* End of About Me CSS */
 
@@ -522,7 +575,14 @@ nav.navbar .navbar-toggler-icon:before {
     background-color: black;
 }
 
-.projects h2 {
+.projects-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+}
+/* .projects h2 {
     font-size: 45px;
     font-weight: 700;
     text-align: center;
@@ -536,6 +596,20 @@ nav.navbar .navbar-toggler-icon:before {
     margin: 14px auto 30px auto;
     text-align: center;
     width: 56%;
+} */
+
+
+.projects .section-header {
+    margin-bottom: 40px;
+}
+
+.projects .section-header h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.projects .section-header p {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .projects .nav.nav-pills {
@@ -671,16 +745,24 @@ nav.navbar .navbar-toggler-icon:before {
 } */
 
 .contact {
-    background: #151515;
+    background: black;
     padding: 60px 0 60px 0;
+}
+
+.contact-bx {
+    background: #151515;
+    border-radius: 64px;
+    text-align: center;
+    padding: 60px 50px;
+    margin-top: -60px;
+}
+.contact .section-header {
+    margin-bottom: 40px;
 }
 
 .contact .section-header h1 {
     color: white;
-}
-
-.contact .section-header h5 {
-    color: #F06000;
+    font-size: 40px;
 }
 
 .contact .section-header p {
@@ -690,6 +772,7 @@ nav.navbar .navbar-toggler-icon:before {
 .contact-icon {
     display: inline-block;
     margin-left: 14px;
+    padding: 30px 0 30px 0;
 }
 
 .contact-icon a {
@@ -718,7 +801,7 @@ nav.navbar .navbar-toggler-icon:before {
 
 .contact-icon a:hover::before {
     transform: scale(1);
-    background-color: azure;
+    background-color: #F06000;
 }
 
 .contact-icon a img {
@@ -730,6 +813,8 @@ nav.navbar .navbar-toggler-icon:before {
 .contact-icon a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
+
+
 /* End of Contact CSS */
 /* Footer CSS */
 

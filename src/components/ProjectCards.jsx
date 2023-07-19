@@ -38,7 +38,7 @@ function ProjectCarousel(props) {
     return (
         <Carousel>
             {projects.map(project => (
-                <Carousel.Item interval={100} key={project.index}>
+                <Carousel.Item interval={400} key={project.index}>
                     <img
                         className="d-block w-100"
                         src={project.imgUrl}
@@ -50,7 +50,7 @@ function ProjectCarousel(props) {
                         <p>{project.technicals}</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-            ))};
+            ))}
         </Carousel>
     );
 };
@@ -59,7 +59,7 @@ function ProjectCarousel(props) {
 function ProjectCard () {
     return (
     <Row>
-        {projects.map(project => (
+            {projects.map(project => (
                 <Col size={12} sm={12} md={6}>
                     <div className="proj-imgbx">
                         <img src={project.imgUrl} alt="" />
@@ -71,7 +71,7 @@ function ProjectCard () {
                     </div>
                 </Col>
             ))
-            };
+            }
         </Row>
     );
 };
