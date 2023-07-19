@@ -382,7 +382,7 @@ nav.navbar .navbar-toggler-icon:before {
     background: #151515;
     border-radius: 64px;
     text-align: center;
-    padding: 60px 50px;
+    padding: 60px 60px;
     margin-top: -60px;
 }
 
@@ -403,8 +403,6 @@ nav.navbar .navbar-toggler-icon:before {
     width: 100%;
     text-align: center;
 }
-
-
 
 .about button {
     font-weight: 700;
@@ -476,6 +474,7 @@ nav.navbar .navbar-toggler-icon:before {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
+    /* padding-left: 40px; */
 }
 
 .about .timeline::before {
@@ -483,9 +482,9 @@ nav.navbar .navbar-toggler-icon:before {
     display: block;
     width: 1px;
     height: 100%;
-    background: #F06000;
+    background: rgba(0, 0, 0, 0.2);
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 0;
 }
 
@@ -506,7 +505,7 @@ nav.navbar .navbar-toggler-icon:before {
     text-align: center;
     color: white;
     position: absolute;
-    left: 40%;
+    left: 45%;
     /* top: .9rem; */
     /* margin-left: -2.4rem; */
 }
@@ -530,28 +529,35 @@ nav.navbar .navbar-toggler-icon:before {
 
 .about .timeline-header h3 {
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 
 .about .timeline-header p {
-    font-size: 15px;
+    font-size: 13px;
     color: #888888;
     padding-top: 10px;
 }
 
 .about .timeline-body {
     margin-left: 50%;
+    text-align: center;
 }
 
 .about .timeline-body h4 {
     position: relative;
     padding-bottom: 20px;
     font-weight: 700;
+    font-size: 18px;
 }
 
 .about .timeline-body p {
-    font-size: 15px;
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.about .timeline-body h6 {
+    font-size: 13px;
     padding-top: 10px;
 }
 
@@ -560,13 +566,22 @@ nav.navbar .navbar-toggler-icon:before {
     display: block;
     height: 3px;
     width: 50px;
-    background: rgba(0, 0, 0, 0.2);
+    background: #F06000;
     position: absolute;
     left: 0;
     bottom: 0;
 }
 
+.about .resume-skills h5 {
+    color: #F06000;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.875;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.8px;
+}
 /* End of About Me CSS */
+
 
 /* Projects CSS */
 .projects {
