@@ -351,10 +351,15 @@ nav.navbar .navbar-toggler-icon:before {
     width: 70%;
     height: 70%;
 }
+
 .go-down {
-    display: inline-block;
-    margin-left: 14px;
-    padding: 30px 0 30px 0;
+    /* display: inline-block;; */
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    /* margin-left: 47.5%; */
+    /* padding: 30px 0 30px 0; */
+    padding-top: 700px;
 }
 
 .go-down a {
@@ -896,8 +901,10 @@ nav.navbar .navbar-toggler-icon:before {
 }
 .go-top {
     display: inline-block;
+    position: relative;
     margin-left: 14px;
-    padding: 30px 0 30px 0;
+    /* padding: 30px 0 30px 0; */
+    bottom: 75px;
 }
 
 .go-top a {

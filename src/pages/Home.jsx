@@ -74,8 +74,8 @@ function Home() {
                                 </div>}
                         </TrackVisibility>
                     </Col>
+                    <div className="go-down"><a class="smoothscroll" href="#about"><img src={Down} alt="Down Arrow" /></a></div>
                 </Row>
-                <div className="go-down"><a class="smoothscroll" href="#about"><img src={Down} alt="Down Arrow" /></a></div>
             </Container>
         </section>
     );

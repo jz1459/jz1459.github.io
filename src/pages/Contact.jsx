@@ -13,7 +13,7 @@ function Contact() {
                         <Row>
                             <Col size={12}>
                                 <h5>Contact</h5>
-                                <h1> I'd Love to connect With You.</h1>
+                                <h1> I'd Love To Connect With You.</h1>
                             </Col>
                         </Row>
                         <Row className="align-items-center">
