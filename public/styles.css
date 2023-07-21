@@ -716,34 +716,30 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 
-#proj-wrapper .columns {
-    margin-bottom: 360px;
-}
-
-.proj-item .proj-itemWrapper {
-    background: white;
-    overflow: hidden;
+.proj-item {
     position: relative;
-    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 24px;
 }
 
-.proj-item .proj-itemWrapper a {
+.proj-item a{
     display: block;
     cursor: pointer;
 }
 
-.proj-item .proj-itemWrapper .proj-overlay {
+.proj-item .proj-wrap .proj-overlay {
+    background: url(./css_tools/images/overlay-bg.png) repeat;
+    opacity: 0;
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    background: url(../css_tools/images/overlay-bg.png) repeat;
+    left: 0;
+    top:0;
+    transition: 0.4s ease-in-out;
 }
 
-.proj-item .proj-itemWrapper .proj-plusSign {
+.proj-item .proj-wrap .proj-plusSign {
     display: block;
     color: white;
     height: 30px;
@@ -760,106 +756,37 @@ nav.navbar .navbar-toggler-icon:before {
     margin-top: -15px;
 }
 
-.proj-item .proj-itemWrapper img {
-    width: 200px;
-    height: 200px;
-
-    object-fit: cover;
-    vertical-align: bottom;
-}
-
-.proj-item .proj-title {
-    padding: 18px;
-}
-
-.proj-item .proj-title h4 {
-    color: white;
-}
-
-.proj-item:hover .proj-overlay {
+.proj-item:hover .proj-overlay{
     opacity: 1;
 }
+
 .proj-item:hover .proj-plusSign {
     opacity: 1;
 }
 
-.popup-modal {
-    max-width: 550px;
-    background: #fff;
-    position: relative;
-    margin: 0 auto;
-}
-
-.popup-modal .description-box {
-    padding: 12px 36px 18px 36px;
-}
-
-.popup-modal .description-box h4 {
-    font: 15px/24px 'opensans-bold', sans-serif;
-    margin-bottom: 12px;
-    color: #111;
-}
-
-.popup-modal .description-box p {
-    font: 14px/24px 'opensans-regular', sans-serif;
-    color: #A1A1A1;
-    margin-bottom: 12px;
-}
-
-.popup-modal .description-box .categories {
-    font: 11px/21px 'opensans-light', sans-serif;
-    color: #A1A1A1;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: block;
-    text-align: left;
-}
-
-.popup-modal .description-box .categories i {
-    margin-right: 8px;
-}
-
-.popup-modal .link-box {
-    padding: 18px 36px;
-    background: #111;
-    text-align: left;
-}
-
-.popup-modal .link-box a {
-    color: #fff;
-    /* font: 11px/21px 'opensans-bold', sans-serif; */
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    cursor: pointer;
-}
-
-.popup-modal a:hover {
-    color: #00CCCC;
-}
-
-.popup-modal a.popup-modal-dismiss {
-    margin-left: 24px;
-}
-
-.mfp-fade.mfp-wrap .mfp-content .popup-modal {
+.proj-txtx {
+    position: absolute;
+    text-align: center;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s ease-in-out;
     opacity: 0;
-    /* -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    -ms-transition: all 200ms ease-in-out; */
-    transition: all 200ms ease-in-out;
+    width: 100%;
+}
+.proj-txtx h4 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1.1em;
 }
 
-/* content fadein */
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content .popup-modal {
-    opacity: 1;
+.proj-txtx span {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.8px;
 }
-
-/* content fadeout */
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content .popup-modal {
-    opacity: 0;
-}
-
 /* End of Projects CSS */
 
 
