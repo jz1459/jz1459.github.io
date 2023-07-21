@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Carousel from 'react-bootstrap/Carousel';
+// import Carousel from 'react-bootstrap/Carousel';
 import PokerHandApp from "../assets/poker-7174110.png";
 import WorkInProgress from "../assets/work-in-progress.png";
 import { Col, Row, Modal, Button, Container } from "react-bootstrap";
@@ -41,27 +41,27 @@ const projects = [
     },
 ];
     
-function ProjectCarousel(props) {
+// function ProjectCarousel(props) {
 
-    return (
-        <Carousel>
-            {projects.map(project => (
-                <Carousel.Item interval={400} key={project.id}>
-                    <img
-                        className="d-block w-100"
-                        src={project.imgUrl}
-                        alt="slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
-                        <p>{project.technicals}</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            ))}
-        </Carousel>
-    );
-};
+//     return (
+//         <Carousel interval={400}>
+//             {projects.map(project => (
+//                 <Carousel.Item interval={400} key={project.id}>
+//                     <img
+//                         className="d-block w-50"
+//                         src={project.imgUrl}
+//                         alt="slide"
+//                     />
+//                     <Carousel.Caption>
+//                         <h3>{project.title}</h3>
+//                         <p>{project.description}</p>
+//                         <p>{project.technicals}</p>
+//                     </Carousel.Caption>
+//                 </Carousel.Item>
+//             ))}
+//         </Carousel>
+//     );
+// };
 
 
 function ProjectCard() {
@@ -76,7 +76,7 @@ function ProjectCard() {
                     {modalData && (<MyModal show={modalData} project={modalData} onClose={hideModal} />)}
                 </div>
                 {projects.map(project => (
-                    <Col size={12} sm={6} md={6} key={project.id}>
+                    <Col size={12} sm={6} md={4} key={project.id}>
                         <div className="proj-item">
                             <div className="proj-wrap">
                                 <button
@@ -114,7 +114,9 @@ function MyModal({ show, project, onClose }) {
                     <Container>
                         <Row>
                             <Col>
-                                <img src={project.imgUrl} alt="Project" />
+                                <div className="d-flex align-items-center justify-content-center">
+                                    <img src={project.imgUrl} alt="Project" />
+                                </div>
                             </Col>
                         </Row>
                         <Row>
@@ -147,6 +149,6 @@ function MyModal({ show, project, onClose }) {
     );
 };
 
-export default ProjectCarousel;
+export default ProjectCard;
 
-export { ProjectCard };
+// export { ProjectCarousel };

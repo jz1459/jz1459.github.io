@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import ProjectCarousel, {ProjectCard} from "../components/ProjectCards";
+import { Container, Row, Col/*, Tab, Nav*/ } from "react-bootstrap";
+import ProjectCard/*, {ProjectCarousel}*/ from "../components/ProjectCards";
 import 'animate.css';
 
 
@@ -15,7 +15,7 @@ function Projects() {
                                 <h5>Projects</h5>
                                 <h1>Check out some of my projects.</h1>
                             </div>
-                            <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                            {/* <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                     <Nav.Item>
                                         <Nav.Link eventKey="first">List View</Nav.Link>
@@ -25,14 +25,14 @@ function Projects() {
                                     </Nav.Item>
                                 </Nav>
                                 <Tab.Content id="slideInUp">
-                                    <Tab.Pane eventKey="first">
+                                    <Tab.Pane eventKey="first"> */}
                                         <ProjectCard />
-                                    </Tab.Pane>
+                                    {/* </Tab.Pane>
                                     <Tab.Pane eventKey="second">
                                         <ProjectCarousel />
                                     </Tab.Pane>
                                 </Tab.Content>
-                            </Tab.Container>
+                            </Tab.Container> */}
                         </div>
                     </Col>
                 </Row>
