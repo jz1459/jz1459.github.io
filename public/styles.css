@@ -523,7 +523,6 @@ nav.navbar .navbar-toggler-icon:before {
     position: relative;
     margin-top: 40px;
     margin-bottom: 40px;
-    /* padding-left: 40px; */
 }
 
 .about .timeline::before {
@@ -544,31 +543,20 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 .about .timeline-icon {
-    /* height: 4.8rem; */
-    /* width: 4.8rem; */
-    /* line-height: 4.8rem; */
     height: 35px;
     width: 35px;
     line-height: 35px;
-    background: transparent;
+    background: black;
     text-align: center;
     color: white;
     position: absolute;
     left: 40%;
-    /* top: .9rem; */
-    /* margin-left: -2.4rem; */
+    border-radius: 50%;
 }
 
 .about .timeline-icon i {
     position: relative;
 }
-
-.about .timline-icon i img {
-    position: relative;
-    width: 20%;
-    height: 10px;
-}
-
 
 .about .timeline-header {
     float: left;
@@ -723,7 +711,7 @@ nav.navbar .navbar-toggler-icon:before {
     margin-bottom: 24px;
 }
 
-.proj-item a{
+.proj-item button{
     display: block;
     cursor: pointer;
 }
@@ -739,13 +727,10 @@ nav.navbar .navbar-toggler-icon:before {
     transition: 0.4s ease-in-out;
 }
 
-.proj-item .proj-wrap .proj-plusSign {
+.proj-item .proj-wrap .bi-plus {
     display: block;
     color: white;
-    height: 30px;
-    width: 30px;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 35px;
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -760,7 +745,7 @@ nav.navbar .navbar-toggler-icon:before {
     opacity: 1;
 }
 
-.proj-item:hover .proj-plusSign {
+.proj-item:hover .bi-plus {
     opacity: 1;
 }
 
@@ -774,19 +759,51 @@ nav.navbar .navbar-toggler-icon:before {
     opacity: 0;
     width: 100%;
 }
-.proj-txtx h4 {
-    font-size: 30px;
+
+.proj-title h4 {
+    font-size: 20px;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1.1em;
+    color: white;
+    padding-top: 15px;
 }
 
-.proj-txtx span {
+.modal-title h4{
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.modal-body h4{
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.modal-body span {
     font-style: italic;
     font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.8px;
+    font-size: 13px;
+    color: black;
 }
+
+.modal-body i {
+    padding-right: 10px;
+}
+
+.modal-footer {
+    background-color: black;
+}
+
+.modal-footer .proj-button{
+    color: white;
+    background-color: black;
+    border: none;
+}
+
 /* End of Projects CSS */
 
 
@@ -935,34 +952,4 @@ nav.navbar .navbar-toggler-icon:before {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
-/* .go-top {
-    position: absolute;
-    top: -24px;
-    left: 50%;
-    margin-left: -30px;
-}
-
-.go-top a {
-    text-decoration: none;
-    border: 0 none;
-    display: block;
-    width: 60px;
-    height: 60px;
-    background-color: #525252;
-
-    transition: all 0.2s ease-in-out;
-
-    color: #fff;
-    font-size: 21px;
-    line-height: 60px;
-    border-radius: 100%;
-}
-
-.go-top .img {
-    width: 42px;
-    height: 42px;
-}
-.go-top a:hover {
-    background-color: #F06000;
-} */
 /* End of Footer CSS */

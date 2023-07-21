@@ -10,7 +10,7 @@ function Footer() {
                         <Col size={12}>
                             <p>&copy; Jason Zheng. All Rights Reserved</p>
                     </Col>
-                    <div className="go-top"><a class="smoothscroll" title="Back to Top" href="#home"><img src={Up} alt="Up Arrow" /></a></div> 
+                    <div className="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><img src={Up} alt="Up Arrow" /></a></div> 
 
                     </Row>
                 </Container>

@@ -3,10 +3,6 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import { Row, Container, Col } from 'react-bootstrap';
-// import TrackVisibility from 'react-on-screen';
-import Activity from '../assets/activity.svg';
-import Briefcase from '../assets/briefcase-fill.svg';
-import Pencil from '../assets/pencil-fill.svg';
 
 
 function About() {
@@ -33,9 +29,6 @@ function About() {
             <Container>
                 <Row>
                     <Col size={12}>
-                        {/* <TrackVisibility> */}
-                        {/* {({ isVisible }) => */}
-                        {/* <div className={isVisible ? "animate__animated animate__fadeIn" : ""}> */}
                         <div className="about-bx">
                             <div className="section-header">
                                 <h5>
@@ -63,7 +56,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="pencil"><img src={Pencil} alt="Pencil" /></i>
+                                                                    <i className="bi bi-pencil-fill"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Bachelor's Degree</h3>
@@ -78,7 +71,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="pencil"><img src={Pencil} alt="Pencil" /></i>
+                                                                    <i className="bi bi-pencil-fill"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Certificate</h3>
@@ -93,7 +86,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="pencil"><img src={Pencil} alt="Pencil" /></i>
+                                                                    <i className="bi bi-pencil-fill"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>High School Degree</h3>
@@ -123,7 +116,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="work"><img src={Briefcase} alt="Briefcase" /></i>
+                                                                    <i className="bi bi-briefcase-fill"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Research Assistant (Data Visualizations)</h3>
@@ -138,7 +131,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="work"><img src={Briefcase} alt="Briefcase" /></i>
+                                                                    <i className="bi bi-briefcase-fill"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Data Analyst</h3>
@@ -153,7 +146,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="work"><img src={Briefcase} alt="Briefcase" /></i>
+                                                                    <i className="bi bi-briefcase-fill"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Business Development Intern</h3>
@@ -183,7 +176,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Vice President of Finance and Operations</h3>
@@ -198,7 +191,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Industrials Analyst</h3>
@@ -213,7 +206,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Player</h3>
@@ -228,7 +221,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Advanced Tax Preparer</h3>
@@ -243,7 +236,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Project Manager</h3>
@@ -258,7 +251,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Back-End Developer</h3>
@@ -273,7 +266,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Treasurer, Operations Manager</h3>
@@ -288,7 +281,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Player</h3>
@@ -303,7 +296,7 @@ function About() {
                                                         <div className="timeline">
                                                             <div className="timeline-block">
                                                                 <div className="timeline-icon">
-                                                                    <i className="activity"><img src={Activity} alt="Activity" /></i>
+                                                                    <i className="bi bi-activity"></i>
                                                                 </div>
                                                                 <div className="timeline-header">
                                                                     <h3>Team Member</h3>
@@ -337,11 +330,8 @@ function About() {
                                 </Card>
                             </Accordion>
                               
-                            <button className='resume-button'><span>Resume</span></button>
-                  
+                            <button className='resume-button'><span>Resume</span></button>        
                         </div>
-                        {/* </div>} */}
-                        {/* </TrackVisibility> */}
                     </Col>
                 </Row>
             </Container>

@@ -2,43 +2,43 @@ import React, {useState} from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import PokerHandApp from "../assets/poker-7174110.png";
 import WorkInProgress from "../assets/work-in-progress.png";
-import { Col, Row } from "react-bootstrap";
-import Plus from "../assets/plus.svg";
-import ReactModal from 'react-modal';
+import { Col, Row, Modal, Button, Container } from "react-bootstrap";
+
+
 
 const projects = [
-        {
-            title: "Poker Hand App",
-            technicals: "Used: Poker-odds API, React, JS, HTML, CSS",
-            description: "Gives probability of your poker hand winning based off the cards in your hand and those on the table",
-            imgUrl: PokerHandApp,
+    {
+        title: "Poker Hand App",
+        technicals: "React, JS, HTML, CSS",
+        description: "Used the Poker-odds API to create a dynamic web app that gives the probability of your poker hand winning based off the cards in your hand and those on the table",
+        imgUrl: PokerHandApp,
         gitHub: "https://github.com/jz1459",
-            id: 1,
-        },
-        {
-            title: "To-Do App w/ Randomizer",
-            technicals: "Design & Development",
-            description: "In Progress",
-            imgUrl: WorkInProgress,
-            gitHub: "https://github.com/jz1459",
-            id: 2,
-        },
-        {
-            title: "Taste of China Website",
-            technicals: "Design & Development",
-            description: "In Progress",
-            imgUrl: WorkInProgress,
-            gitHub: "https://github.com/jz1459",
-            id: 3,
-        },
-        {
-            title: "Fantasy Football App",
-            technicals: "Design & Development",
-            description: "In Progress",
-            imgUrl: WorkInProgress,
-            gitHub: "https://github.com/jz1459",
-            id: 4,
-        },
+        id: 1,
+    },
+    {
+        title: "To-Do App w/ Randomizer",
+        technicals: "Design & Development",
+        description: "In Progress",
+        imgUrl: WorkInProgress,
+        gitHub: "https://github.com/jz1459",
+        id: 2,
+    },
+    {
+        title: "Taste of China Website",
+        technicals: "Design & Development",
+        description: "In Progress",
+        imgUrl: WorkInProgress,
+        gitHub: "https://github.com/jz1459",
+        id: 3,
+    },
+    {
+        title: "Fantasy Football App",
+        technicals: "Design & Development",
+        description: "In Progress",
+        imgUrl: WorkInProgress,
+        gitHub: "https://github.com/jz1459",
+        id: 4,
+    },
 ];
     
 function ProjectCarousel(props) {
@@ -46,7 +46,7 @@ function ProjectCarousel(props) {
     return (
         <Carousel>
             {projects.map(project => (
-                <Carousel.Item interval={400} key={project.index}>
+                <Carousel.Item interval={400} key={project.id}>
                     <img
                         className="d-block w-100"
                         src={project.imgUrl}
@@ -65,56 +65,87 @@ function ProjectCarousel(props) {
 
 
 function ProjectCard() {
-    const [isOpen, setIsOpen] = useState(false);
     const [modalData, setModalData] = useState(null);
+    const showModal = (project) => setModalData(project);
+    const hideModal = () => setModalData(null);
 
-    const handleClick = (data) => {
-        setIsOpen(true);
-        setModalData(data);
-    };
-    
     return (
         <>
             <Row>
+                <div className="proj-modal">
+                    {modalData && (<MyModal show={modalData} project={modalData} onClose={hideModal} />)}
+                </div>
                 {projects.map(project => (
-                    <Col size={12} sm={6} md={6}>
-                        <div className="proj-item" key={project.id}>
+                    <Col size={12} sm={6} md={6} key={project.id}>
+                        <div className="proj-item">
                             <div className="proj-wrap">
-                                <a
-                                    onClick={() => {
-                                        handleClick(project)
-                                    }}>
-                                    <img src={project.imgUrl} alt="Project Image" />
-                                </a>
-                                <div className="proj-overlay">
-                                    <div className="proj-title">
-                                        <h4>{project.title}</h4>
+                                <button
+                                    onClick={() => { showModal(project) }}>
+                                    <img src={project.imgUrl} alt="Project" />
+                                    <div className="proj-overlay">
+                                        <div className="proj-title">
+                                            <h4>{project.title}</h4>
+                                        </div>
+                                        <div className="proj-plusSign">
+                                            <i class = "bi bi-plus"></i>
+                                        </div>
                                     </div>
-                                    <div className="proj-plusSign">
-                                        <img src={Plus} alt="Plus Sign" />
-                                    </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </Col>
                 ))}
             </Row>
-            <ReactModal
-                isOpen={isOpen}
-                onRequestClose={() => setIsOpen(false)}
-            >
-                <div className="proj-txtx">
-                    <h4>{modalData.description}</h4>
-                    <span>{modalData.technicals}</span>
-                </div>
-                <div className="proj-close">
-                    <button onClick={() => isOpen(false)}>X</button>
-                </div>
-            </ReactModal>
         </>
     );
 };
 
+function MyModal({ show, project, onClose }) {
+    return (
+        <Modal
+            show={show}
+            onHide={onClose}
+            keyboard={true}
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header>
+                <Modal.Title>
+                    <Container>
+                        <Row>
+                            <Col>
+                                <img src={project.imgUrl} alt="Project" />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h4>{project.title}</h4>
+                            </Col>
+                        </Row>
+                    </Container>
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <Container>
+                    <Row>
+                        <Col>
+                            <h4>{project.description}</h4>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <span><i className = "bi bi-tags"></i>{project.technicals}</span>
+                        </Col>
+                    </Row>
+                </Container>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button href={project.gitHub} target= "_blank" className="proj-button">View on GitHub</Button>
+                <Button onClick={onClose} className="proj-button">Close</Button>
+            </Modal.Footer>
+        </Modal>
+    );
+};
 
 export default ProjectCarousel;
 
