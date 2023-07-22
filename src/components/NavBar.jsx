@@ -21,13 +21,13 @@ function NavBar() {
             }
             // var currentSection = "";
             sections.forEach((section) => {
-                let top = window.scrollY + 260;
-                let offset = section.offsetTop;
+                let top = window.scrollY;
+                let offset = section.offsetTop - section.clientHeight / 3;
                 let height = section.offsetHeight;
                 let id = section.getAttribute('id');
                 // let topOfSection = section.getBoundingClientRect().top;
 
-                if (top >= offset && top < offset + height) {
+                if (top >= offset /*&& top < offset + height*/) {
                     tabs.forEach(links => {
                         links.classList.remove('active');
                         document.querySelector('nav.navbar .navbar-nav a[href="#' + id + '"]').classList.add('active');
