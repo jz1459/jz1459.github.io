@@ -9,8 +9,8 @@ import GitHub from "../assets/github.svg";
 function NavBar() {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-    const sections = document.querySelectorAll("section");
-    const tabs = document.querySelectorAll("navbar-link a");
+    // const sections = document.querySelectorAll("section");
+    // const tabs = document.querySelectorAll("nav.navbar .navbar-nav a");
 
     useEffect(() => {
         const onScroll = () => {
@@ -19,20 +19,22 @@ function NavBar() {
             } else {
                 setScrolled(false);
             }
-            var currentSection = "";
-            sections.forEach((section) => {
-                let topOfSection = section.offsetTop;
-                if (window.scrollY >= topOfSection - 50) {
-                    currentSection = section.getAttribute("id");
-                }
-            });
-            tabs.forEach((Link) => {
-                Link.classList.remove("active");
-                // if (Link.classList.contains(currentSection)) {
-                //     Link.classList.add("active");
-                // };
-                document.querySelector('navbar-link a[href*= ' + currentSection + ']').classList.add("active");
-            });
+            // var currentSection = "";
+            // sections.forEach((section) => {
+            //     let topOfSection = section.getBoundingClientRect().top;
+            //     if (window.scrollY >= topOfSection - 60) {
+            //         currentSection = section.getAttribute("id");
+            //     }
+            // });
+            // tabs.forEach((a) => {
+            //     a.classList.remove("active");
+            //     // if (a.classList.contains(currentSection)) {
+            //     //     a.classList.add("active");
+            //     // };
+            //     var activeSection = document.querySelector('.navbar-nav a[href="#' + currentSection + '"]');
+            //     a.classList.remove("active");
+            //     activeSection.classList.add("active");
+            // });
         }
 
         window.addEventListener("scroll", onScroll);
@@ -56,9 +58,14 @@ function NavBar() {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#home" className={activeLink === 'home' ? 'home active navbar-link' : 'home navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                            <Nav.Link href="#about" className={activeLink === 'about' ? 'about active navbar-link' : 'about navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
-                            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'projects active navbar-link' : 'projects navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                            {/* <ul>
+                                <li><a href="#home" className={activeLink === 'home' ? 'home active navbar-link' : 'home navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</a></li>
+                                <li><a href="#about" className={activeLink === 'about' ? 'about active navbar-link' : 'about navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</a></li>
+                                <li><a href="#projects" className={activeLink === 'projects' ? 'projects active navbar-link' : 'projects navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</a></li>
+                            </ul> */}
+                            <Nav.Link href="#home" id = 'homeLink' className={activeLink === 'home' ? 'home active navbar-link' : 'home navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                            <Nav.Link href="#about" id = 'aboutLink' className={activeLink === 'about' ? 'about active navbar-link' : 'about navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
+                            <Nav.Link href="#projects" id = 'projectsLink' className={activeLink === 'projects' ? 'projects active navbar-link' : 'projects navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         </Nav>
                         <span className="navbar-text">
                             <div className="social-icon">

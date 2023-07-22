@@ -153,6 +153,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
     padding: 0 25px;
     font-size: 18px;
     opacity: 1;
+    background-color: #121212;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -289,7 +290,7 @@ nav.navbar .navbar-toggler-icon:before {
 /* Home CSS */
 .home {
     margin-top: 0;
-    padding: 260px 0 200px 0;
+    padding: 260px 0 300px 0;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
