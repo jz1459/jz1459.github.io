@@ -9,8 +9,8 @@ import GitHub from "../assets/github.svg";
 function NavBar() {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
-    // const sections = document.querySelectorAll("section");
-    // const tabs = document.querySelectorAll("nav.navbar .navbar-nav a");
+    const sections = document.querySelectorAll("section");
+    const tabs = document.querySelectorAll("nav.navbar .navbar-nav a");
 
     useEffect(() => {
         const onScroll = () => {
@@ -20,12 +20,23 @@ function NavBar() {
                 setScrolled(false);
             }
             // var currentSection = "";
-            // sections.forEach((section) => {
-            //     let topOfSection = section.getBoundingClientRect().top;
-            //     if (window.scrollY >= topOfSection - 60) {
-            //         currentSection = section.getAttribute("id");
-            //     }
-            // });
+            sections.forEach((section) => {
+                let top = window.scrollY + 260;
+                let offset = section.offsetTop;
+                let height = section.offsetHeight;
+                let id = section.getAttribute('id');
+                // let topOfSection = section.getBoundingClientRect().top;
+
+                if (top >= offset && top < offset + height) {
+                    tabs.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('nav.navbar .navbar-nav a[href="#' + id + '"]').classList.add('active');
+                    })
+                }
+                // if (window.scrollY >= topOfSection - 60) {
+                //     currentSection = section.getAttribute("id");
+                // }
+            });
             // tabs.forEach((a) => {
             //     a.classList.remove("active");
             //     // if (a.classList.contains(currentSection)) {
@@ -50,7 +61,7 @@ function NavBar() {
         <Router>
             <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
                 <Container>
-                     <Navbar.Brand href="/"> 
+                     <Navbar.Brand href="#home"> 
                         <p>Jason Zheng</p>
                     </Navbar.Brand> 
                     <Navbar.Toggle aria-controls="basic-navbar-nav">

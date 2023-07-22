@@ -3,7 +3,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import { Row, Container, Col } from 'react-bootstrap';
-import { Waypoint } from 'react-waypoint';
+// import { Waypoint } from 'react-waypoint';
 
 function About() {
     const CustomToggle = ({ children, eventKey }) => {
@@ -55,10 +55,10 @@ function About() {
                                 </p>
                                 
                             </div>
-                            <Waypoint
+                            {/* <Waypoint
                                 onEnter={handleWayPointEnter}
                                 onLeave={handleWayPointLeave}
-                            >
+                            > */}
                                 <Accordion>
                                  
                                     <Card>
@@ -346,7 +346,7 @@ function About() {
                                         </Accordion.Collapse>
                                     </Card>
                                 </Accordion>
-                            </Waypoint>
+                            {/* </Waypoint> */}
                             <button className='resume-button'><span>Resume</span></button>
         
                         </div>

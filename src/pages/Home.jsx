@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Down from "../assets/chevron-down.svg";
-import { Waypoint } from 'react-waypoint';
+// import { Waypoint } from 'react-waypoint';
 
 function Home() {
     const [loopNum, setLoopNum] = useState(0);
@@ -56,10 +56,10 @@ function Home() {
         document.querySelector('#homeLink').classList.remove('active'));
 
     return (
-        <Waypoint
-            onEnter={handleWayPointEnter}
-            onLeave={handleWayPointLeave}
-        >
+        // <Waypoint
+        //     onEnter={handleWayPointEnter}
+        //     onLeave={handleWayPointLeave}
+        // >
             <section className="home" id="home">
                 <Container>
                     <Row className="align-items-center">
@@ -70,12 +70,12 @@ function Home() {
                                         <span className="tagline">Welcome to my Portfolio!</span>
                                         <h1>{`Hi! I'm Jason, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer", "Sports Enthusiast", "Car Fanatic" ]'><span className="wrap">{text}</span></span></h1>
                                         {/* <p>I am currently a rising junior at Yale University majoring in Computer Science and Economics with a Certificate in Data Science.</p> */}
-                                        <Waypoint
+                                        {/* <Waypoint
             onEnter={handleWayPointEnter}
             onLeave={handleWayPointLeave}
-        >
+        > */}
                                             <button><a href="#contact">Let’s Connect <ArrowRightCircle size={25} /></a></button>
-                                            </Waypoint>
+                                            {/* </Waypoint> */}
                                     </div>}
                             </TrackVisibility>
                         </Col>
@@ -95,7 +95,7 @@ function Home() {
                     </Row>
                 </Container>
             </section>
-        </Waypoint>
+        // </Waypoint>
     );
 };
 

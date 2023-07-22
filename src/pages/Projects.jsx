@@ -2,7 +2,7 @@ import { React } from "react";
 import { Container, Row, Col/*, Tab, Nav*/ } from "react-bootstrap";
 import ProjectCard/*, {ProjectCarousel}*/ from "../components/ProjectCards";
 import 'animate.css';
-import { Waypoint } from 'react-waypoint';
+// import { Waypoint } from 'react-waypoint';
 
 
 function Projects() {
@@ -36,14 +36,14 @@ function Projects() {
                                 </Nav>
                                 <Tab.Content id="slideInUp">
                                     <Tab.Pane eventKey="first"> */}
-                            <Waypoint
+                            {/* <Waypoint
                                 onEnter={handleWayPointEnter}
                                 onLeave={handleWayPointLeave}
-                            >
+                            > */}
                                 <div className="projects-content">
                                     <ProjectCard />
                                 </div>
-                            </Waypoint>
+                            {/* </Waypoint> */}
                             {/* </Tab.Pane>
                                     <Tab.Pane eventKey="second">
                                         <ProjectCarousel />
