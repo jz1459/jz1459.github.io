@@ -17,7 +17,7 @@ const projects = [
     },
     {
         title: "To-Do App w/ Randomizer",
-        technicals: "Design & Development",
+        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
         description: "In Progress",
         imgUrl: WorkInProgress,
         gitHub: "https://github.com/jz1459",
@@ -25,7 +25,7 @@ const projects = [
     },
     {
         title: "Taste of China Website",
-        technicals: "Design & Development",
+        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
         description: "In Progress",
         imgUrl: WorkInProgress,
         gitHub: "https://github.com/jz1459",
@@ -33,11 +33,19 @@ const projects = [
     },
     {
         title: "Fantasy Football App",
-        technicals: "Design & Development",
+        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
         description: "In Progress",
         imgUrl: WorkInProgress,
         gitHub: "https://github.com/jz1459",
         id: 4,
+    },
+    {
+        title: "Personal Website",
+        technicals: "React, JS, HTML, CSS",
+        description: "Personal Portfolio Website    ",
+        imgUrl: WorkInProgress,
+        gitHub: "https://github.com/jz1459/Personal-Website",
+        id: 5,
     },
 ];
     

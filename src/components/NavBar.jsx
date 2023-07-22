@@ -9,6 +9,8 @@ import GitHub from "../assets/github.svg";
 function NavBar() {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const sections = document.querySelectorAll("section");
+    const tabs = document.querySelectorAll("navbar-link a");
 
     useEffect(() => {
         const onScroll = () => {
@@ -17,6 +19,20 @@ function NavBar() {
             } else {
                 setScrolled(false);
             }
+            var currentSection = "";
+            sections.forEach((section) => {
+                let topOfSection = section.offsetTop;
+                if (window.scrollY >= topOfSection - 50) {
+                    currentSection = section.getAttribute("id");
+                }
+            });
+            tabs.forEach((Link) => {
+                Link.classList.remove("active");
+                // if (Link.classList.contains(currentSection)) {
+                //     Link.classList.add("active");
+                // };
+                document.querySelector('navbar-link a[href*= ' + currentSection + ']').classList.add("active");
+            });
         }
 
         window.addEventListener("scroll", onScroll);
@@ -40,14 +56,14 @@ function NavBar() {
                     </Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                            <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
-                            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+                            <Nav.Link href="#home" className={activeLink === 'home' ? 'home active navbar-link' : 'home navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+                            <Nav.Link href="#about" className={activeLink === 'about' ? 'about active navbar-link' : 'about navbar-link'} onClick={() => onUpdateActiveLink('about')}>About Me</Nav.Link>
+                            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'projects active navbar-link' : 'projects navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
                         </Nav>
                         <span className="navbar-text">
                             <div className="social-icon">
-                                <a href="https://www.linkedin.com/in/jz1459/"><img src={LinkedIn} alt="LinkedIn" /></a>
-                                <a href="https://www.github.com/jz1459"><img src={GitHub} alt="Github" /></a>
+                                <a href="https://www.linkedin.com/in/jz1459/" target="_blank"><img src={LinkedIn} alt="LinkedIn" /></a>
+                                <a href="https://www.github.com/jz1459" target="_blank"><img src={GitHub} alt="Github" /></a>
                             </div>
                             <HashLink to='#contact'>
                                 <button><span>Let’s Connect</span></button>
