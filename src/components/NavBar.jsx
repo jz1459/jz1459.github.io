@@ -27,7 +27,7 @@ function NavBar() {
                 let id = section.getAttribute('id');
                 // let topOfSection = section.getBoundingClientRect().top;
 
-                if (top >= offset /*&& top < offset + height*/) {
+                if (top >= offset && id !== 'contact' && id !== 'footer'/*&& top < offset + height*/) {
                     tabs.forEach(links => {
                         links.classList.remove('active');
                         document.querySelector('nav.navbar .navbar-nav a[href="#' + id + '"]').classList.add('active');
