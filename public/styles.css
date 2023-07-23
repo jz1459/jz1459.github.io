@@ -128,12 +128,13 @@ p.danger {
 /* NavBar CSS */
 
 nav.navbar {
-    padding: 18px 0;
+    padding: 25px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 9999;
     transition: 0.32s ease-in-out;
+    background-color: #121212;
 }
 
 nav.navbar.scrolled {
@@ -178,7 +179,7 @@ span.navbar-text {
     background: white;
     display: inline-flex;
     border-radius: 50%;
-    margin-right: 6px;
+    margin: 0 10px;
     align-items: center;
     justify-content: center;
     line-height: 1;
@@ -285,15 +286,38 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 
+@media (min-width: 300px) and (max-width: 480px) {
+    nav.navbar {
+        padding: 25px 0;
+        background-color: #121212;
+    }
+
+    nav.navbar .navbar-collapse {
+        margin: 10px 0;
+    }
+
+    nav.navbar .navbar-collapse .nav-link.navbar-link {
+        margin: 5px 0;
+    }
+
+    nav.navbar .navbar-collapse .navbar-text .social-icon a {
+        margin: 0 10px;
+    }
+}
+
 /* End of NavBar CSS */
 
 /* Home CSS */
 .home {
     margin-top: 0;
-    padding: 260px 0 300px 0;
+    padding: 200px 0 200px 0;
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.home .container {
+    text-align: center;
 }
 
 .home .tagline {
@@ -316,22 +340,15 @@ nav.navbar .navbar-toggler-icon:before {
     display: block;
 }
 
-.home p {
-    color: #B8B8B8;
-    font-size: 18px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    width: 96%;
-}
-
 .home button a{
     color: #fff;
     font-weight: 700;
     font-size: 20px;
-    margin-top: 60px;
     letter-spacing: 0.8px;
     display: flex;
     align-items: center;
+    margin-left: 340px;
+    margin-top: -50px;
 }
 
 .home button svg {
@@ -354,28 +371,50 @@ nav.navbar .navbar-toggler-icon:before {
 
 .go-down {
     /* display: inline-block;; */
-    position: absolute;
-    left: 50%;
-    margin-left: -30px;
-    /* margin-left: 47.5%; */
+    /* position: absolute;
+    display: block;
+    bottom: 30px;
+    left: 50%; */
+    /* display: inline-flex;
+    align-items: center;
+    justify-content: center; */
+    /* text-align: center; */
+     
     /* padding: 30px 0 30px 0; */
-    padding-top: 700px;
+    /* padding-top: 700px; */
 }
 
 .go-down a {
-    width: 42px;
+    /* width: 42px;
     height: 42px;
     background: white;
-    display: inline-flex;
+    display: block;
     border-radius: 50%;
     margin-right: 8px;
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5); */
+    position: relative;
+    /* bottom: 30px; */
+    left: 50%;
+    margin-left: -29px;
+    color: #fff;
+    display: block;
+    height: 42px;
+    width: 42px;
+    font-size: 42px;
+    line-height: 42px;
+    border-radius: 100%;
+    margin-top: 72px;
 }
 
-.go-down a::before {
+.go-down a:hover {
+    color: #F06000;
+    transition: 0.3s ease-in-out;
+}
+
+/* .go-down a::before {
     content: "";
     width: 42px;
     height: 42px;
@@ -384,9 +423,9 @@ nav.navbar .navbar-toggler-icon:before {
     border-radius: 50%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
-}
+} */
 
-.go-down a:hover::before {
+/* .go-down a:hover::before {
     transform: scale(1);
     background-color: #F06000;
 }
@@ -399,7 +438,7 @@ nav.navbar .navbar-toggler-icon:before {
 
 .go-down a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-}
+} */
 
 @keyframes updown {
     0% {
@@ -417,6 +456,85 @@ nav.navbar .navbar-toggler-icon:before {
 
 .txt-rotate>.wrap {
     border-right: 0.08em solid #666;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+    .home {
+        width: 100%;
+        padding: 100px 0 300px 0;
+    }
+
+    .home .container{
+       /* margin-left: 20%; */
+    }
+
+    .home .tagline {
+        /* margin-left: 25%; */
+        padding: 0;
+    }
+    .home h1 {
+        /* margin-left: 25%; */
+        padding: 0; 
+        font-size: 55px;
+    }
+
+    .home button a { 
+        margin-top: 70px;
+        margin-left: 30%;
+        
+    }
+
+    .home .pfp img {
+        margin-top: 40px;
+        margin-left: 5%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .go-down a {
+        margin-left: -5%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .home h1 {
+        font-size: 60px;
+    }
+
+    .home button a {
+        margin-top: 65px;
+        margin-left: 20%;
+    }
+
+    .go-down a {
+        margin-left: -2%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .home h1 {
+        font-size: 60px;
+    }
+
+    .home button a {
+        margin-top: 20px;
+        margin-left: 25%;
+    }
+
+    .go-down a {
+        margin-left: -2%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+
+    .home button a {
+        margin-left: 25%;
+    }
+
+    .go-down a {
+        margin-left: -2%;
+    }
 }
 /* End of Home CSS */
 
@@ -566,12 +684,12 @@ nav.navbar .navbar-toggler-icon:before {
 
 .about .timeline-header h3 {
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
 }
 
 .about .timeline-header p {
-    font-size: 13px;
+    font-size: 15px;
     color: #888888;
     padding-top: 10px;
 }
@@ -585,16 +703,16 @@ nav.navbar .navbar-toggler-icon:before {
     position: relative;
     padding-bottom: 20px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .about .timeline-body p {
-    font-size: 13px;
+    font-size: 15px;
     padding-top: 10px;
 }
 
 .about .resume-skills h6 {
-    font-size: 13px;
+    font-size: 15px;
     padding-top: 10px;
     font-weight: 700;
 }
@@ -617,6 +735,75 @@ nav.navbar .navbar-toggler-icon:before {
     line-height: 1.875;
     margin-bottom: 10px;
     letter-spacing: 0.8px;
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+    .about-bx {
+        padding: 60px 20px;
+    }
+
+    .about .section-header h1 {
+        font-size: 25px;
+    }
+
+    .about .section-header h5 {
+        font-size: 20px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+    
+    .about .timeline-icon {
+        height: 30px;
+        width: 30px;
+    }
+    .about .timeline-header h3 {
+        font-size: 14px;
+    }
+
+    .about .timeline-header p {
+        font-size: 11px;
+    }
+
+    .about .timeline-body h4 {
+        font-size: 14px;
+    }
+
+    .about .timeline-body p {
+        font-size: 11px;
+    }
+
+    .about .timeline-body h4::after {
+        width: 40px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .about p {
+        font-size: 15px;
+    }
+
+    .about .timeline-icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .about .timeline-header h3 {
+        font-size: 14px;
+    }
+
+    .about .timeline-header p {
+        font-size: 11px;
+    }
+
+    .about .timeline-body h4 {
+        font-size: 14px;
+    }
+
+    .about .timeline-body p {
+        font-size: 11px;
+    }
 }
 /* End of About Me CSS */
 
@@ -797,7 +984,6 @@ nav.navbar .navbar-toggler-icon:before {
 }
 
 .modal-title img {
-    padding-left: 40px;
     margin: auto;
 }
 
@@ -807,7 +993,6 @@ nav.navbar .navbar-toggler-icon:before {
     padding-top: 10px;
     font-weight: 700;
     font-size: 20px;
-    padding-left: 45px;
     margin: auto;
 }
 
@@ -838,10 +1023,26 @@ nav.navbar .navbar-toggler-icon:before {
     border: none;
 }
 
+@media (min-width: 300px) and (max-width: 480px) {
+    .projects-bx {
+        padding: 60px 20px;
+    }
+
+    .projects .section-header h1 {
+        font-size: 25px;
+    }
+
+    .projects .section-header h5 {
+        font-size: 20px;
+    }
+    
+}
 /* End of Projects CSS */
 
 
+
 /* Contact CSS */
+
 /* .contact {
     background-color: black;
     padding: 60px 0 60px 0;
@@ -917,6 +1118,19 @@ nav.navbar .navbar-toggler-icon:before {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 
+@media (min-width: 300px) and (max-width: 480px) {
+    .contact-bx {
+        padding: 60px 20px;
+    }
+
+    .contact .section-header h1 {
+        font-size: 25px;
+    }
+
+    .contact .section-header h5 {
+        font-size: 20px;
+    }
+}
 
 /* End of Contact CSS */
 /* Footer CSS */
@@ -939,16 +1153,17 @@ nav.navbar .navbar-toggler-icon:before {
     align-items: center;
     justify-content: center;
 }
+
 .go-top {
-    display: inline-block;
+    /* display: inline-block;
     position: relative;
     margin-left: 14px;
-    /* padding: 30px 0 30px 0; */
-    bottom: 75px;
+    padding: 30px 0 30px 0;
+    bottom: 75px; */
 }
 
 .go-top a {
-    width: 42px;
+    /* width: 42px;
     height: 42px;
     background: white;
     display: inline-flex;
@@ -957,10 +1172,26 @@ nav.navbar .navbar-toggler-icon:before {
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5); */
+    position: relative;
+    left: 50%;
+    margin-left: -29px;
+    color: #fff;
+    display: block;
+    height: 42px;
+    width: 42px;
+    font-size: 42px;
+    line-height: 42px;
+    border-radius: 100%;
+    margin-top: -10px;
 }
 
-.go-top a::before {
+.go-top a:hover {
+    color: #F06000;
+    transition: 0.3s ease-in-out;
+}
+
+/* .go-top a::before {
     content: "";
     width: 42px;
     height: 42px;
@@ -984,6 +1215,29 @@ nav.navbar .navbar-toggler-icon:before {
 
 .go-top a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+} */
+
+@media (min-width: 300px) and (max-width: 480px) {
+    .go-top a {
+        margin-left: -5%;
+    }
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .go-top a {
+        margin-left: -2%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .go-top a {
+        margin-left: -2%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .go-top a {
+        margin-left: -2%;
+    }
+}
 /* End of Footer CSS */
