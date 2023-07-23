@@ -11,10 +11,10 @@ function Home() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
-    const [charTime, setCharTime] = useState(200);
-    const [index, setIndex] = useState(1);
-    const toRotate = [  "Software Developer", "Sports Enthusiast", "Computer Science Student at Yale"];
-    const wordDelay = 100;
+    const [charTime, setCharTime] = useState(300 - Math.random() * 100);
+    // const [index, setIndex] = useState(1);
+    const toRotate = ["Software Developer", "Sports Enthusiast", "Computer Science Student at Yale"];
+    const wordDelay = 2000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -22,7 +22,7 @@ function Home() {
         }, charTime);
         
         return () => { clearInterval(ticker) };
-    }, [text]);
+    });
 
     const tick = () => {
         let i = loopNum % toRotate.length;
@@ -37,15 +37,13 @@ function Home() {
 
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
-            setIndex(prevIndex => prevIndex - 1);
+            // setIndex(prevIndex => prevIndex - 1);
             setCharTime(wordDelay);
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            setIndex(1);
+            // setIndex(1);
             setCharTime(400);
-        } else {
-            setIndex(prevIndex => prevIndex + 1);
         }
     };
 
