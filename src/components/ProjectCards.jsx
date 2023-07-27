@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 // import Carousel from 'react-bootstrap/Carousel';
 import PokerHandApp from "../assets/poker-7174110.png";
+import ToDoApp from "../assets/todoapp.png";
 import WorkInProgress from "../assets/work-in-progress.png";
 import { Col, Row, Modal, Button, Container } from "react-bootstrap";
 
@@ -17,10 +18,10 @@ const projects = [
     },
     {
         title: "To-Do App w/ Randomizer",
-        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
-        description: "In Progress",
-        imgUrl: WorkInProgress,
-        gitHub: "https://github.com/jz1459",
+        technicals: "React, Node, MongoDB, Express, JS, HTML, CSS, Axios, Mongoose",
+        description: "MERN To-Do App with random spinning wheel to select the next task to do",
+        imgUrl: ToDoApp,
+        gitHub: "https://github.com/jz1459/To-Do-App",
         id: 2,
     },
     {
@@ -42,7 +43,7 @@ const projects = [
     {
         title: "Personal Website",
         technicals: "React, JS, HTML, CSS",
-        description: "Personal Portfolio Website    ",
+        description: "Personal Portfolio Website",
         imgUrl: WorkInProgress,
         gitHub: "https://github.com/jz1459/Personal-Website",
         id: 5,
