@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.321f33b0.css",
+    "main.js": "/static/js/main.19843195.js",
+    "static/media/profilePic.JPG": "/static/media/profilePic.a7d27e55fd1d2681ad96.JPG",
+    "static/media/portfolio.png": "/static/media/portfolio.a55e9971af273857001c.png",
+    "static/media/poker-7174110.png": "/static/media/poker-7174110.58b36feea74d5b971322.png",
+    "static/media/work-in-progress.png": "/static/media/work-in-progress.7e97dc7289dac33e69ac.png",
+    "static/media/todoapp.png": "/static/media/todoapp.8ce08a621133db63e483.png",
+    "static/media/Zheng_Jason_Resume.pdf": "/static/media/Zheng_Jason_Resume.0c9fd1ff2b280b97f9fa.pdf",
+    "index.html": "/index.html",
+    "static/media/github.svg": "/static/media/github.22e65707326e3e1e37afd21c5334995a.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.2eda7bddaacee15c44494bb63ca94165.svg",
+    "static/media/envelope.svg": "/static/media/envelope.ceed57e9483391a79813f313693eb103.svg",
+    "main.321f33b0.css.map": "/static/css/main.321f33b0.css.map",
+    "main.19843195.js.map": "/static/js/main.19843195.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.321f33b0.css",
+    "static/js/main.19843195.js"
+  ]
+}
