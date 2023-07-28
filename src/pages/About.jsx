@@ -332,7 +332,7 @@ function About() {
                                         </Accordion.Collapse>
                                     </Card>
                                 </Accordion>
-                            <button className='resume-button'><span>Resume</span></button>     
+                            <a className='resume-button' href={require("../assets/files/Zheng_Jason_Resume.pdf")} target="_blank" ><span>Resume</span></a>     
                         </div>
                     </Col>
                 </Row>

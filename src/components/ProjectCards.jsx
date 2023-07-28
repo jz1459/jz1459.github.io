@@ -14,7 +14,7 @@ const projects = [
         technicals: "React, JS, HTML, CSS",
         description: "Used the Poker-odds API to create a dynamic web app that gives the probability of your poker hand winning based off the cards in your hand and those on the table",
         imgUrl: PokerHandApp,
-        gitHub: "https://github.com/jz1459",
+        gitHub: "https://github.com/dalonjon/PokerApp",
         id: 1,
     },
     {
@@ -30,7 +30,7 @@ const projects = [
         technicals: "React, JS, HTML, CSS",
         description: "Personal Portfolio Website",
         imgUrl: Portfolio,
-        gitHub: "https://github.com/jz1459/Personal-Website",
+        gitHub: "https://github.com/jz1459/jz1459.github.io",
         id: 3,
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
         description: "In Progress",
         imgUrl: WorkInProgress,
-        gitHub: "https://github.com/jz1459",
+        gitHub: "https://github.com/jz1459/taste-of-china",
         id: 4,
     },
     {

@@ -571,6 +571,7 @@ nav.navbar .navbar-toggler-icon:before {
     text-align: center;
 }
 
+
 .about button {
     font-weight: 700;
     color: #fff;
@@ -583,6 +584,7 @@ nav.navbar .navbar-toggler-icon:before {
     transition: 0.3s ease-in-out;
 }
 
+.about a,
 .about button span {
     z-index: 1;
 }
@@ -599,6 +601,18 @@ nav.navbar .navbar-toggler-icon:before {
     transition: 0.3s ease-in-out;
 }
 
+.about a {
+        font-weight: 700;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 18px 34px;
+        font-size: 18px;
+        margin-top: 20px;
+        display: inline-block;
+        position: relative;
+        background-color: transparent;
+        transition: 0.3s ease-in-out;
+}
 
 .about button:hover {
     transition: 0.3s ease-in-out !important;
