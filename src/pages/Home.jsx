@@ -4,15 +4,12 @@ import Pfp from "../assets/profilePic.JPG";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-// import Down from "../assets/chevron-down.svg";
-// import { Waypoint } from 'react-waypoint';
 
 function Home() {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const [text, setText] = useState('');
     const [charTime, setCharTime] = useState(300 - Math.random() * 100);
-    // const [index, setIndex] = useState(1);
     const toRotate = ["Software Developer", "Sports Enthusiast", "Computer Science Student at Yale"];
     const wordDelay = 2000;
 
@@ -37,27 +34,15 @@ function Home() {
 
         if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true);
-            // setIndex(prevIndex => prevIndex - 1);
             setCharTime(wordDelay);
         } else if (isDeleting && updatedText === '') {
             setIsDeleting(false);
             setLoopNum(loopNum + 1);
-            // setIndex(1);
             setCharTime(400);
         }
     };
 
-    const handleWayPointEnter = () => (
-        document.querySelector('#homeLink').classList.add('active'));
-    
-    const handleWayPointLeave = () => (
-        document.querySelector('#homeLink').classList.remove('active'));
-
     return (
-        // <Waypoint
-        //     onEnter={handleWayPointEnter}
-        //     onLeave={handleWayPointLeave}
-        // >
         <section className="home" id="home">
             <Container>
                 <Row className="align-items-center">
@@ -67,13 +52,6 @@ function Home() {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio!</span>
                                     <h1>{`Hi! I'm Jason, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer", "Sports Enthusiast", "Car Fanatic" ]'><span className="wrap">{text}</span></span></h1>
-                                    {/* <p>I am currently a rising junior at Yale University majoring in Computer Science and Economics with a Certificate in Data Science.</p> */}
-                                    {/* <Waypoint
-            onEnter={handleWayPointEnter}
-            onLeave={handleWayPointLeave}
-        > */}
-                                   
-                                    {/* </Waypoint> */}
                                 </div>}
                         </TrackVisibility>
                     </Col>
@@ -93,10 +71,9 @@ function Home() {
                 <Row>
                      <button><a href="#contact">Let’s Connect <ArrowRightCircle size={25} /></a></button>
                 </Row>
-                <div className="go-down"><a href="#about"><i className = "bi bi-arrow-down-circle-fill"></i>{/*<img src={Down} alt="Down Arrow" />*/}</a></div>
+                <div className="go-down"><a href="#about"><i className = "bi bi-arrow-down-circle-fill"></i></a></div>
             </Container>
         </section>
-        // </Waypoint>
     );
 };
 

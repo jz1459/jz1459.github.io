@@ -3,6 +3,7 @@ import React, {useState} from "react";
 import PokerHandApp from "../assets/poker-7174110.png";
 import ToDoApp from "../assets/todoapp.png";
 import WorkInProgress from "../assets/work-in-progress.png";
+import Portfolio from "../assets/portfolio.png";
 import { Col, Row, Modal, Button, Container } from "react-bootstrap";
 
 
@@ -25,15 +26,15 @@ const projects = [
         id: 2,
     },
     {
-        title: "Taste of China Website",
-        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
-        description: "In Progress",
-        imgUrl: WorkInProgress,
-        gitHub: "https://github.com/jz1459",
+        title: "Personal Website",
+        technicals: "React, JS, HTML, CSS",
+        description: "Personal Portfolio Website",
+        imgUrl: Portfolio,
+        gitHub: "https://github.com/jz1459/Personal-Website",
         id: 3,
     },
     {
-        title: "Fantasy Football App",
+        title: "Taste of China Website",
         technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
         description: "In Progress",
         imgUrl: WorkInProgress,
@@ -41,11 +42,11 @@ const projects = [
         id: 4,
     },
     {
-        title: "Personal Website",
-        technicals: "React, JS, HTML, CSS",
-        description: "Personal Portfolio Website",
+        title: "Fantasy Football App",
+        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
+        description: "In Progress",
         imgUrl: WorkInProgress,
-        gitHub: "https://github.com/jz1459/Personal-Website",
+        gitHub: "https://github.com/jz1459",
         id: 5,
     },
 ];

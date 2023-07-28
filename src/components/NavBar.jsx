@@ -32,7 +32,7 @@ function NavBar() {
                         links.classList.remove('active');
                         document.querySelector('nav.navbar .navbar-nav a[href="#' + id + '"]').classList.add('active');
                     })
-                }
+                };
                 // if (window.scrollY >= topOfSection - 60) {
                 //     currentSection = section.getAttribute("id");
                 // }

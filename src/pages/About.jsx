@@ -3,7 +3,6 @@ import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import { Row, Container, Col } from 'react-bootstrap';
-// import { Waypoint } from 'react-waypoint';
 
 function About() {
     const CustomToggle = ({ children, eventKey }) => {
@@ -24,15 +23,6 @@ function About() {
             </button>
         );
     };
-
-    const handleWayPointEnter = () => (
-        document.querySelector('#aboutLink').classList.add('active'),
-        document.querySelector('#homeLink').classList.remove('active'),
-        document.querySelector('#projectsLink').classList.remove('active'));
-    
-    const handleWayPointLeave = () => (
-        document.querySelector('#homeLink').classList.add('active'),
-        document.querySelector('#aboutLink').classList.remove('active'));
     
     return (
     
@@ -55,10 +45,6 @@ function About() {
                                 </p>
                                 
                             </div>
-                            {/* <Waypoint
-                                onEnter={handleWayPointEnter}
-                                onLeave={handleWayPointLeave}
-                            > */}
                                 <Accordion>
                                  
                                     <Card>
@@ -340,15 +326,13 @@ function About() {
                                                 <div className='resume-skills'>
                                                     <h5> Languages </h5><h6> C | Python | R | JS | Java | HTML | CSS | MongoDB | Unix | Git | x86-Assembly | LateX | Racket | Bubble</h6>
                                                     <br></br>
-                                                    <h5>Frameworks/Libraries </h5><h6>Node | React | Bootstrap | Express | Mongoose | jQuery | EJS | RShiny</h6>
+                                                    <h5>Frameworks/Libraries </h5><h6>Node | React | Bootstrap | Express | Mongoose | jQuery | EJS | Axios | RShiny</h6>
                                                 </div>
                                             </Card.Body>
                                         </Accordion.Collapse>
                                     </Card>
                                 </Accordion>
-                            {/* </Waypoint> */}
-                            <button className='resume-button'><span>Resume</span></button>
-        
+                            <button className='resume-button'><span>Resume</span></button>     
                         </div>
                     </Col>
                 </Row>

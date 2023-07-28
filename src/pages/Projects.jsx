@@ -2,17 +2,10 @@ import { React } from "react";
 import { Container, Row, Col/*, Tab, Nav*/ } from "react-bootstrap";
 import ProjectCard/*, {ProjectCarousel}*/ from "../components/ProjectCards";
 import 'animate.css';
-// import { Waypoint } from 'react-waypoint';
 
 
 function Projects() {
-    const handleWayPointEnter = () => (
-        document.querySelector('#projectsLink').classList.add('active'),
-        document.querySelector('#aboutLink').classList.remove('active'),
-        document.querySelector('#homeLink').classList.remove('active'));
-    
-    const handleWayPointLeave = () => (
-        document.querySelector('#projectsLink').classList.remove('active'));
+
     return (
         
         <section className="projects" id="projects">
@@ -36,14 +29,9 @@ function Projects() {
                                 </Nav>
                                 <Tab.Content id="slideInUp">
                                     <Tab.Pane eventKey="first"> */}
-                            {/* <Waypoint
-                                onEnter={handleWayPointEnter}
-                                onLeave={handleWayPointLeave}
-                            > */}
                                 <div className="projects-content">
                                     <ProjectCard />
                                 </div>
-                            {/* </Waypoint> */}
                             {/* </Tab.Pane>
                                     <Tab.Pane eventKey="second">
                                         <ProjectCarousel />

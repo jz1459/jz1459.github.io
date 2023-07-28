@@ -6,7 +6,6 @@ import Envelope from "../assets/envelope.svg";
 function Contact() {
     return (
         <section className="contact" id="contact">
-            
             <Container>
                 <div className="contact-bx">
                     <div className="section-header">
