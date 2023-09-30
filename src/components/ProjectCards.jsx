@@ -4,6 +4,8 @@ import PokerHandApp from "../assets/poker-7174110.png";
 import ToDoApp from "../assets/todoapp.png";
 import WorkInProgress from "../assets/work-in-progress.png";
 import Portfolio from "../assets/portfolio.png";
+import TasteOfChina from "../assets/taste-of-china.png";
+import FootballGrid from "../assets/football-grid.png";
 import { Col, Row, Modal, Button, Container } from "react-bootstrap";
 
 
@@ -37,7 +39,7 @@ const projects = [
         title: "Taste of China Website",
         technicals: "React, Node, MongoDB, Express, JSON Web Tokens, JS, HTML, CSS",
         description: "Website for family restaurant that uses JSON Web Tokens to implement authentication middleware that allows for family easy access to edit menu items",
-        imgUrl: WorkInProgress,
+        imgUrl: TasteOfChina,
         gitHub: "https://github.com/jz1459/taste-of-china",
         id: 4,
     },
@@ -45,7 +47,7 @@ const projects = [
         title: "Football Grid",
         technicals: "React, Python (Pandas, BeautifulSoup), JS, HTML, CSS",
         description: "Combined the logic behind ImmaculateGrid and Tic-Tac-Toe to make an interactive football trivia game with data scrapped from Pro-football-reference   ",
-        imgUrl: WorkInProgress,
+        imgUrl: FootballGrid,
         gitHub: "https://github.com/jz1459/Football-Grid",
         id: 5,
     },
