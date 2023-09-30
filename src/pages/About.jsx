@@ -39,9 +39,17 @@ function About() {
                                 <p>
                                     I am a first-generation student at Yale University pursuing a Bachelor of Science in Computer Science and Economics with a Certificate in Data Science. My primary interests lie within the intersection of finance and computer science.
                                     <br></br>
-                            
                                     <br></br>
-                                    I am actively seeking summer 2024 internships for software engineering.
+                                    <ul><p>Notable Coursework at Yale:</p></ul>
+                                    <li>CPSC 223: Data Structures and Programming Techniques</li>
+                                    <li>CPSC 323: Introduction to System Programming and Computer Organization</li>
+                                    <li>CPSC 365: Algorithms</li>
+                                    <li>CPSC 480: Introduction to Computer Vision</li>
+                                    <li>S&DS 265: Introduction to Machine Learning</li>
+                                    <br></br>
+
+                                    <br></br>
+                                    I am actively seeking summer 2024 internships for software engineering, sports analytics, or machine learning.
                                 </p>
                                 
                             </div>
@@ -175,7 +183,22 @@ function About() {
                                             <Card.Body>
                                                 <Row className="d-flex align-items-center justify-content-center">
                                                     <div className='resume-timeline'>
-                                                        <Col size={12}>
+                                                    <Col size={12}>
+                                                         <div className="timeline">
+                                                                <div className="timeline-block">
+                                                                    <div className="timeline-icon">
+                                                                        <i className="bi bi-activity"></i>
+                                                                    </div>
+                                                                    <div className="timeline-header">
+                                                                        <h3>Front-end Lead</h3>
+                                                                        <p>September 2023 - Present</p>
+                                                                    </div>
+                                                                    <div className="timeline-body">
+                                                                        <h4>Yale Computer Society - MajorAudit</h4>
+                                                                    <p></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                             <div className="timeline">
                                                                 <div className="timeline-block">
                                                                     <div className="timeline-icon">

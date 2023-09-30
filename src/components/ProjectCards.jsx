@@ -35,19 +35,27 @@ const projects = [
     },
     {
         title: "Taste of China Website",
-        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
-        description: "In Progress",
+        technicals: "React, Node, MongoDB, Express, JSON Web Tokens, JS, HTML, CSS",
+        description: "Website for family restaurant that uses JSON Web Tokens to implement authentication middleware that allows for family easy access to edit menu items",
         imgUrl: WorkInProgress,
         gitHub: "https://github.com/jz1459/taste-of-china",
         id: 4,
     },
     {
-        title: "Fantasy Football App",
-        technicals: "React, Node, MongoDB, Express, EJS, JS, HTML, CSS",
-        description: "In Progress",
+        title: "Football Grid",
+        technicals: "React, Python (Pandas, BeautifulSoup), JS, HTML, CSS",
+        description: "Combined the logic behind ImmaculateGrid and Tic-Tac-Toe to make an interactive football trivia game with data scrapped from Pro-football-reference   ",
+        imgUrl: WorkInProgress,
+        gitHub: "https://github.com/jz1459/Football-Grid",
+        id: 5,
+    },
+    {
+        title: "MajorAudit",
+        technicals: "React, JS, HTML, CSS",
+        description: "MajorAudit is a project developed via YCS that aims to make Yale's DegreeAudit website more user-friendly",
         imgUrl: WorkInProgress,
         gitHub: "https://github.com/jz1459",
-        id: 5,
+        id: 6,
     },
 ];
     
